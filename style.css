@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg: #f1f5f9;
+  --primary: #4e89ff;
+  --accent: #ff6b6b;
+  --win: #38b000;
+  --lose: #d00000;
+  --draw: #ffb703;
+  --text: #333;
+  --btn-bg: white;
+  --btn-hover: #e0e0e0;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: popUp 0.8s ease;
+}
+
+
+.btnj {
+  background-color: var(--btn-bg);
+  color: var(--text);
+  border: 2px solid var(--primary);
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition), transform 0.2s;
+  width: 160px;
+  text-align: center;
+}
+
+.btnj:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+
+.btnr {
+  margin-top: 2rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition), transform 0.2s;
+}
+
+.btnr:hover {
+  background-color: #d94f4f;
+  transform: scale(1.05);
+}
+
+
+#resultat {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  animation: fadeIn 0.8s ease;
+}
+
+#victoire {
+  color: var(--win);
+  font-weight: 500;
+}
+
+#defaite {
+  color: var(--lose);
+  font-weight: 500;
+}
+
+#egalite {
+  color: var(--draw);
+  font-weight: 500;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
